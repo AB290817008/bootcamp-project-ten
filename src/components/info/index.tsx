@@ -19,9 +19,9 @@ const useStyles = makeStyles((theme: Theme) =>
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap",
-    width: "40vh",
+    width: "80vh",
     margin: "0 auto",
-    padding: "4vh",
+    padding: "2vh",
     borderStyle: "solid",
     borderColor: "grey"
   },
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme: Theme) =>
     marginTop: "3vh",
 
     '&:hover': {
-      backgroundColor: "darkGrey"
+      backgroundColor: "black"
     },
     
   },
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) =>
     
    return (
      <Formik
-       initialValues={{ firstName: savedValues[0].firstName, lastName: savedValues[0].lastName, email: savedValues[0].email ,phone: savedValues[0].phone, city: savedValues[0].city, area: savedValues[0].area}}
+       initialValues={{ firstName: savedValues[0].firstName, lastName: savedValues[0].lastName, email: savedValues[0].email , city: savedValues[0].city, area: savedValues[0].area}}
        validationSchema={Yup.object({
          firstName: Yup.string()
            .max(15, 'Must be 15 characters or less')
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme: Theme) =>
          
        })}
        onSubmit={(values) => {
-        savedValues[1]({...savedValues[0],firstName: values.firstName, lastName: values.lastName, phone:values.phone, email: values.email, city: values.city, area:values.area})
+        savedValues[1]({...savedValues[0],firstName: values.firstName, lastName: values.lastName, email: values.email, city: values.city, area:values.area})
         handleNext()
        }}
      >

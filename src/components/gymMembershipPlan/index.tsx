@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme: Theme) =>
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap",
-    width: "40vh",
+    width: "50vh",
     margin: "0 auto",
-    padding: "4vh",
+    padding: "9vh",
     borderStyle: "solid",
     borderColor: "grey",
 
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme: Theme) =>
     marginTop: "3vh",
 
     '&:hover': {
-      backgroundColor: "darkGrey"
+      backgroundColor: "black"
     },
     
   },
@@ -81,22 +81,16 @@ const useStyles = makeStyles((theme: Theme) =>
         console.log(values.package)
         switch (values.package) {
            
-            case "5 Mbps":
-               savedValues[1]({...savedValues[0], package:values.package, amount: 50})
+            case "Gold":
+               savedValues[1]({...savedValues[0], package:values.package, amount: 100})
                break
-            case "10 Mbps":
-              savedValues[1]({...savedValues[0],package:values.package, amount: 60})
+            case "Platinium":
+              savedValues[1]({...savedValues[0],package:values.package, amount: 150})
               break
-            case "20 Mbps":
-              savedValues[1]({...savedValues[0], package:values.package, amount: 70})
+            case "Diamond":
+              savedValues[1]({...savedValues[0], package:values.package, amount: 300})
               break
-            case "50 Mbps":
-              savedValues[1]({...savedValues[0], package:values.package, amount: 80})
-              break
-            case "100 Mbps":
-              savedValues[1]({...savedValues[0], package:values.package, amount: 100})
-              break
-  
+            
             default:
               savedValues[1]({...savedValues[0], package:"", amount: 0})
           }
@@ -114,12 +108,10 @@ const useStyles = makeStyles((theme: Theme) =>
 <FormControl className = {classes.innerWrapper} component="fieldset">
         
          <Field name="package" as={RadioGroup} >
-         <Field name ="package" as={FormControlLabel} value="5 Mbps" control={<Radio />} label="5 Mbps - $50" />
-         <Field name ="package" as={FormControlLabel} value="10 Mbps" control={<Radio />} label="10 Mbps - $60" />
-         <Field name ="package" as={FormControlLabel} value="20 Mbps" control={<Radio />} label="20 Mbps - $70" />
-         <Field name ="package" as={FormControlLabel} value="50 Mbps" control={<Radio />} label="50 Mbps - $80" />
-         <Field name ="package" as={FormControlLabel} value="100 Mbps" control={<Radio />} label="100 Mbps - $100" />
-
+         <Field name ="package" as={FormControlLabel} value="Gold" control={<Radio />} label="Gold - $100" />
+         <Field name ="package" as={FormControlLabel} value="Platinium" control={<Radio />} label="Platinium - $150" />
+         <Field name ="package" as={FormControlLabel} value="Diamond" control={<Radio />} label="Diamond - $300" />
+         
          </Field>
          <FormHelperText><ErrorMessage name="package" /></FormHelperText>
          

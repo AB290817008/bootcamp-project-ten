@@ -16,9 +16,9 @@ const useStyles = makeStyles((theme: Theme) =>
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap",
-    width: "40vh",
+    width: "75vh",
     margin: "0 auto",
-    padding: "4vh",
+    padding: "2vh",
     borderStyle: "solid",
     borderColor: "grey"
   
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) =>
     marginTop: "3vh",
 
     '&:hover': {
-      backgroundColor: "darkGrey"
+      backgroundColor: "black"
     },
     
   },
@@ -77,14 +77,14 @@ console.log(savedValues[0])
 
    return (
     <div className = {classes.wrapper}>
-    <h2 className= {classes.headings}>Personal Information</h2>
+    <h2 className= {classes.headings}>Your Information</h2>
     <p className = {classes.infoFields} ><span className = {classes.fieldTitles} >Name: </span> <span className = {classes.fieldInfo}>{savedValues[0].firstName} {savedValues[0].lastName}</span></p>
     <p className = {classes.infoFields} ><span  className = {classes.fieldTitles} >Email: </span> <span className = {classes.fieldInfo} >{savedValues[0].email}</span></p>
-    <p className = {classes.infoFields} ><span  className = {classes.fieldTitles} >Phone: </span> <span className = {classes.fieldInfo} >{savedValues[0].phone}</span></p>
+    
     <p className = {classes.infoFields} ><span  className = {classes.fieldTitles} >City: </span> <span className = {classes.fieldInfo} >{savedValues[0].city}</span></p>
     <p className = {classes.infoFields} ><span  className = {classes.fieldTitles} >Area: </span> <span className = {classes.fieldInfo} >{savedValues[0].area}</span></p>
 
-    <h2 className= {classes.headings}>Plan Details</h2>
+    <h2 className= {classes.headings}>Your Membership</h2>
     <p className = {classes.infoFields} ><span  className = {classes.fieldTitles} >Package: </span> <span className = {classes.fieldInfo} >{savedValues[0].package}</span></p>
     <p className = {classes.infoFields}><span  className = {classes.fieldTitles} > Amount: </span> <span className = {classes.fieldInfo} >${savedValues[0].amount}</span></p>
     <div className = {classes.buttonsWrapper}>
