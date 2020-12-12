@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className ={classes.wrapper} >
-      <h1 className = {classes.mainHeading}>DJ Gym Memberships</h1>
+      <h1 className = {classes.mainHeading}>Gym Memberships</h1>
 
       <Stepper activeStep={activeStep} alternativeLabel>
         {steps.map((label) => (
