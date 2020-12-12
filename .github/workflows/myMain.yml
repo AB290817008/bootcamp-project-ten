@@ -38,4 +38,4 @@ jobs:
       run: npm install -g surge
       
     - name: deploying on surge
-      run: surge ./build http://uncovered-quiet.surge.sh/ --token ${{ secrets.MY_TOKEN }}
+      run: surge ./build http://macabre-purpose.surge.sh/ --token ${{ secrets.MY_TOKEN }}
