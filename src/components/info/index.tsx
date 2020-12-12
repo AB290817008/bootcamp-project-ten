@@ -51,8 +51,7 @@ const useStyles = makeStyles((theme: Theme) =>
  const PersonalInfo:React.FC<props> = ({savedValues, handleNext}) => {
     const classes = useStyles();
 
-    const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-
+    
    return (
      <Formik
        initialValues={{ firstName: savedValues[0].firstName, lastName: savedValues[0].lastName, email: savedValues[0].email ,phone: savedValues[0].phone, city: savedValues[0].city, area: savedValues[0].area}}
@@ -66,12 +65,7 @@ const useStyles = makeStyles((theme: Theme) =>
          email: Yup.string()
            .email('Invalid email address')
            .required('Required'),
-           phone: Yup.string()
-           .max(15, 'Must be 15 characters or less')
-           .min(6,'Must be 6 characters or more')
-           .required('Required')
-           .matches(phoneRegExp, 'Phone number is not valid'),
-          city: Yup.string()
+            city: Yup.string()
           .required('Required'),
           area: Yup.string()
           .required('Required'),
@@ -91,7 +85,7 @@ const useStyles = makeStyles((theme: Theme) =>
          <Field  error = {formik.errors.firstName && formik.touched.firstName}  className = {classes.fields}  name="firstName" as= {TextField} label = "First Name"  helperText={<ErrorMessage name="firstName"/>}/>
          <Field error = {formik.errors.lastName  && formik.touched.lastName}  className = {classes.fields} name="lastName" as= {TextField} label = "Last Name"  helperText={<ErrorMessage name="lastName"/>}/>
          <Field error = {formik.errors.email  && formik.touched.email}  className = {classes.fields} name="email" as= {TextField} label = "Email"  helperText={<ErrorMessage name="email"/>}/>
-         <Field error = {formik.errors.phone && formik.touched.phone} className = {classes.fields} name="phone" as= {TextField} type = "number" label = "Phone"  helperText={<ErrorMessage name="phone"/>}/>
+         
          <Field error = {formik.errors.city && formik.touched.city}  className = {classes.fields} name="city"  as= {TextField} label = "City"  helperText={<ErrorMessage name="city"/>}/>
          <Field error = {formik.errors.area && formik.touched.area} className = {classes.fields}  name="area"  as= {TextField} label = "Area"  helperText={<ErrorMessage name="area"/>}/>
 

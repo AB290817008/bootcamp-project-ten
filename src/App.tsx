@@ -40,7 +40,7 @@ export interface savedValues {
 }
 
 function getSteps() {
-  return ['Your Personal Information', 'Select a Package', 'Review Information'];
+  return ['Your Info', 'Select a Membership Plan', 'Review Information'];
 }
 
 
@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className ={classes.wrapper} >
-      <h1 className = {classes.mainHeading}>Buy an Internet Plan</h1>
+      <h1 className = {classes.mainHeading}>Gym Membership Plans</h1>
 
       <Stepper activeStep={activeStep} alternativeLabel>
         {steps.map((label) => (
