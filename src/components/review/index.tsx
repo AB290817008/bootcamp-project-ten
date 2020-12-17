@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme: Theme) =>
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap",
-    width: "75vh",
+    width: "35vh",
     margin: "0 auto",
     padding: "2vh",
     borderStyle: "solid",
-    borderColor: "grey"
+    borderColor: "black"
   
   },
   headings:{

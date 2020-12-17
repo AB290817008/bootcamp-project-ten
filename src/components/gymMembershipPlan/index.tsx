@@ -25,11 +25,11 @@ const useStyles = makeStyles((theme: Theme) =>
     display: "flex",
     flexDirection: "column",
     flexWrap: "wrap",
-    width: "50vh",
+    width: "20vh",
     margin: "0 auto",
     padding: "9vh",
     borderStyle: "solid",
-    borderColor: "grey",
+    borderColor: "black",
 
   },
   innerWrapper:{
