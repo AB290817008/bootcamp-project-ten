@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
     margin: "0 auto",
     padding: "2vh",
     borderStyle: "solid",
-    borderColor: "grey"
+    borderColor: "black"
   },
   fields: {
     marginBottom:"2vh"
